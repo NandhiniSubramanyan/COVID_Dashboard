@@ -13,9 +13,9 @@ import pandas as pd
 from dash.dependencies import Input, Output
 
 #%%
-confirmed_global = pd.read_csv("csse_covid_19_data\\csse_covid_19_time_series\\time_series_covid19_confirmed_global.csv")
-deaths_global = pd.read_csv("csse_covid_19_data\\csse_covid_19_time_series\\time_series_covid19_deaths_global.csv")
-recovered_global = pd.read_csv("csse_covid_19_data\\csse_covid_19_time_series\\time_series_covid19_recovered_global.csv")
+confirmed_global = pd.read_csv("time_series_covid19_confirmed_global.csv")
+deaths_global = pd.read_csv("time_series_covid19_deaths_global.csv")
+recovered_global = pd.read_csv("time_series_covid19_recovered_global.csv")
 country_accumulated_confirmed = confirmed_global.groupby('Country/Region', as_index=False).sum()
 country_accumulated_death = deaths_global.groupby('Country/Region', as_index=False).sum()
 country_accumulated_recovered = recovered_global.groupby('Country/Region', as_index=False).sum()
